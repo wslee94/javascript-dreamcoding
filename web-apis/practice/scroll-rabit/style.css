@@ -1,0 +1,19 @@
+body {
+  background-color: black;
+  margin: 0 auto;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rabbit_btn {
+  outline: none;
+  background-color: tomato;
+  color: white;
+  font-size: 32px;
+  cursor: pointer;
+  margin: 16px 0px;
+}

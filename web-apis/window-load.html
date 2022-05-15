@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script defer>
+      console.log("js loaded");
+    </script>
+  </head>
+  <body>
+    <script>
+      // only document (html)
+      window.addEventListener("DOMContentLoaded", () => {
+        console.log("DOMContentLoaded: html loaded");
+      });
+
+      // document + resources (css, images)
+      window.addEventListener("load", () => {
+        console.log("load: html + resource loaded");
+      });
+
+      // before unload
+      window.addEventListener("beforeunload", () => {
+        console.log("beforeunload");
+      });
+
+      // resource is being unloaded
+      window.addEventListener("unload", () => {
+        console.log("unload");
+      });
+    </script>
+  </body>
+</html>

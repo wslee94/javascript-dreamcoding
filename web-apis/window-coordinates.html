@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Window Coordinates</title>
+    <style>
+      body {
+        background-color: black;
+      }
+
+      div {
+        width: 250px;
+        height: 250px;
+        margin-bottom: 5px;
+        background-color: white;
+        border-radius: 5px;
+      }
+
+      .special {
+        background-color: lightcoral;
+      }
+
+      .button_container {
+        position: fixed;
+        right: 10px;
+        top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <aside class="button_container">
+      <button id="scroll-by">Scroll by 100px(y)</button>
+      <button id="scroll-to">Scroll to 100px(y)</button>
+      <button id="scroll-into">Scroll into special</button>
+    </aside>
+
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div class="special"></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+
+    <script>
+      const specialBox = document.querySelector(".special");
+      const scrollByBtn = document.querySelector("#scroll-by");
+      const scrollToBtn = document.querySelector("#scroll-to");
+      const scrollIntoBtn = document.querySelector("#scroll-into");
+
+      specialBox.addEventListener("click", (e) => {
+        const rect = e.target.getBoundingClientRect();
+        console.log(rect);
+        console.log(`client: ${e.clientX}, ${e.clientY}`);
+        console.log(`page: ${e.pageX}, ${e.pageY}`);
+      });
+
+      scrollByBtn.addEventListener("click", (e) => {
+        window.scrollBy({ top: 100, left: 0, behavior: "smooth" });
+
+        // 직접 계산
+        // window.scrollTo(0, e.pageY + 100);
+      });
+
+      scrollToBtn.addEventListener("click", (e) => {
+        window.scrollTo(0, 100);
+      });
+
+      scrollIntoBtn.addEventListener("click", (e) => {
+        // 엘리가 한 방법
+        specialBox.scrollIntoView();
+
+        // 내가 한 방법
+        // window.scrollTo(0, specialBox.offsetTop);
+      });
+    </script>
+  </body>
+</html>

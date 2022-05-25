@@ -1,0 +1,240 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  font: inherit;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  border: 0;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+  background-color: skyblue;
+  padding-top: 20px;
+}
+
+.container {
+  width: 500px;
+  margin: 0 auto;
+  border-radius: 20px;
+
+  -webkit-box-shadow: 11px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 11px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 11px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.header {
+  text-align: center;
+  background: linear-gradient(to bottom right, #b085f5, #3949ab);
+  color: white;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 20px 20px 0 0;
+  font-size: 1.5rem;
+}
+
+.shopping_list {
+  background-color: white;
+  height: 500px;
+  overflow-y: auto;
+}
+
+.shopping_item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.shopping_item i {
+  cursor: pointer;
+}
+
+.shopping_item i:hover,
+.shopping_item i:active {
+  color: orange;
+}
+
+.input_text_item {
+  width: 100%;
+  height: 30px;
+  border: none;
+  outline: none;
+  padding: 0px 10px;
+  font-size: 1rem;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 80px;
+  background: linear-gradient(to bottom right, #b085f5, #3949ab);
+  border-radius: 0 0 20px 20px;
+}
+
+.add_btn {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.add_btn i {
+  color: white;
+  font-size: 30px;
+}
+
+.add_btn i:hover,
+.add_btn i:active {
+  color: orange;
+}
+
+.remove_btn {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.remove_btn i:hover,
+.remove_btn i:active {
+  color: orange;
+}

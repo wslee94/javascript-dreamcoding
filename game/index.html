@@ -16,24 +16,25 @@
       src="https://kit.fontawesome.com/1ed2f85391.js"
       crossorigin="anonymous"
     ></script>
+    <script src="main.js" defer></script>
   </head>
   <body>
     <main class="content">
-      <button class="play-button"><i class="fa-solid fa-play"></i></button>
+      <button class="play-button">
+        <i class="fa-solid fa-play"></i>
+      </button>
+      <button class="pause-button">
+        <i class="fa-solid fa-square"></i>
+      </button>
+
       <span class="timer">00:00</span>
-      <span class="counter">10</span>
+      <span class="counter"></span>
       <section class="game-zone">
-        <div class="loose-pop-up">
+        <div class="pop-up">
           <button class="reload-button">
             <i class="fa-solid fa-arrow-rotate-right"></i>
           </button>
-          <span class="result-text">you lost 😭</span>
-        </div>
-        <div class="win-pop-up">
-          <button class="reload-button">
-            <i class="fa-solid fa-arrow-rotate-right"></i>
-          </button>
-          <span class="result-text">you won! 🎉</span>
+          <p class="result-text"></p>
         </div>
       </section>
     </main>

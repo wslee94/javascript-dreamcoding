@@ -16,6 +16,7 @@ button:active {
 }
 
 .content {
+  position: relative;
   width: 100%;
   height: 100vh;
   text-align: center;
@@ -24,7 +25,8 @@ button:active {
   background-size: cover;
 }
 
-.play-button {
+.play-button,
+.pause-button {
   width: 50px;
   height: 50px;
   margin: 20px 0 10px 0;
@@ -33,7 +35,12 @@ button:active {
   background-color: lightsalmon;
 }
 
-.play-button i {
+.pause-button {
+  display: none;
+}
+
+.play-button i,
+.pause-button i {
   font-size: 30px;
 }
 
@@ -65,14 +72,18 @@ button:active {
   background-color: lightsalmon;
 }
 
-.loose-pop-up,
-.win-pop-up {
+.pop-up {
+  position: relative;
+  width: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 30px;
+  margin: 0 auto;
   display: none;
+  z-index: 100;
 }
 
 .reload-button {
@@ -92,4 +103,45 @@ button:active {
   font-size: 25px;
   color: white;
   text-transform: capitalize;
+}
+
+.game-zone {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+}
+
+.carrot {
+  display: inline-block;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-image: url("asset/img/carrot.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.carrot:hover,
+.carrot:active {
+  transform: scale(1.2);
+}
+
+.bug {
+  display: inline-block;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-image: url("asset/img/bug.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.bug:hover,
+.bug:active {
+  transform: scale(1.2);
 }
